@@ -4,6 +4,7 @@ pq_part_name := perl-5.20.1
 pq_part_file := $(pq_part_name).tar.gz
 
 pq_perl_configuration_flags += -Dprefix='$(part_dir)'
+pq_perl_configuration_flags += -Duseshrplib
 
 build-stamp: stage-stamp
 	$(MAKE) -C $(pq_part_name) mkinstalldirs=$(part_dir)
